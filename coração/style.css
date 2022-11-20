@@ -1,0 +1,82 @@
+body {
+    display:inline-block;
+    margin: 150px;
+    background-color: rgb(237, 145, 232);
+}
+  
+.coracao{
+    background: hwb(325 37% 11%);
+    position: center;
+    height: 100px;
+    width:100px;
+    transform: rotate(-90deg) scale(3);
+    animation: pulse 0.7s linear infinite;
+    margin-left: auto;
+}
+  
+  
+.coracao::after {
+    background:inherit;
+    border-radius: 50%;
+    content:'';
+    position:absolute;
+    top: -50%; 
+    left:0;
+    height: 100px;
+    width:100px;
+}
+.coracao::before {
+    background:inherit; 
+    border-radius: 50%;
+    content:'';
+    position:absolute;
+    top:0; 
+    right:-50%;
+    height: 100px;
+    width:100px;
+}
+  
+@keyframes pulse{
+    0% {
+        transform: rotate(-45deg) scale(2);
+        opacity: 0;
+    }
+    10% {
+        transform: rotate(-45deg) scale(1);
+    }
+    20% {
+        transform: rotate(-45deg) scale(2);
+    }
+    30% {
+        transform: rotate(-45deg) scale(2);
+    }
+    40% {
+        transform: rotate(-45deg) scale(0.5);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 1;
+    }
+    60% {
+        transform: rotate(-45deg) scale(0.9);
+    }
+    70% {
+        transform: rotate(-45deg) scale(1);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1);
+        opacity: 1;
+    }
+}
+
+.outubro{
+    text-align: center;
+color: rgb(113, 10, 133);
+font-size: 20px;
+}
+
+.outubroo {
+    text-align: center;
+    color: rgb(203, 27, 182);
+    font-size: 16px;
+}
